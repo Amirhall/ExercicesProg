@@ -6,6 +6,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import org.Amir.retrofitsimple.http.RetrofitUtil;
 import org.Amir.retrofitsimple.http.Service;
+import org.Amir.retrofitsimple.transfer.Utilisateur;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -24,11 +25,27 @@ public class ExampleInstrumentedTest {
     @Test
     public void TestSimple() throws IOException {
         Service service = RetrofitUtil.get();
-        Call<String> call = service.listRepos("amir");
+        Call<String> call = service.listRepos("Amirhall");
         Response<String> response = call.execute();
         String resultat = response.body();
         Log.i("retrofit",resultat);
 
+    }
+    @Test
+    public void TestSimpleUtilisateur() throws IOException {
+        Service service = RetrofitUtil.get();
+        Call<String> call = service.utilisateurString("Amirhall");
+        Response<String> response = call.execute();
+        String resultat = response.body();
+        Log.i("retrofit",resultat);
+    }
+    @Test
+    public void TestSimpleUtilisateurStructure() throws IOException {
+        Service service = RetrofitUtil.get();
+        Call<Utilisateur> call = service.utilisateur("Amirhall");
+        Response<Utilisateur> response = call.execute();
+        Utilisateur resultat = response.body();
+        Log.i("retrofit",resultat.toString());
     }
 
 }

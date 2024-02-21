@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'org.Amir.retrofitsimple'
+    namespace 'org.amir.retrofitsimple'
     compileSdk 34
 
     defaultConfig {
-        applicationId "org.Amir.retrofitsimple"
+        applicationId "org.amir.retrofitsimple"
         minSdk 24
         targetSdk 34
         versionCode 1
@@ -31,11 +31,10 @@ android {
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
     implementation group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.9.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
     implementation group: 'com.squareup.retrofit2', name: 'converter-scalars', version: '2.9.0'
-    implementation group: 'com.squareup.retrofit2', name: 'converter-gson', version: '2.9.0'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

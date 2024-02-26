@@ -9,10 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.amir.retrofitsimple.http.RetrofitUtil;
-import org.amir.retrofitsimple.http.ServiceGithub;
-
-import java.io.IOException;
+import org.amir.retrofitsimple.http.Retrofit;
+import org.amir.retrofitsimple.http.Service;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -20,13 +18,14 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState)  {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Button button = findViewById(R.id.button);
-        TextView textView = findViewById(R.id.edittext);
+        EditText editText = findViewById(R.id.edittext);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,15 +34,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
     }
-    private void github(){
-        ServiceGithub service = RetrofitUtil.get();
-        Call<String> call = service.listRepos("amirhall");
+
+    private void github() {
+        EditText editText = findViewById(R.id.edittext);
+        Service service = Retrofit.get();
+        Call<String> call = service.nombre(editText.getText().toString());
         call.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
                 String result = response.body();
+                editText.setText(result);
                 Log.i("retro", result);
             }
 
@@ -56,3 +57,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+

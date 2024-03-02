@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="HardcodedText">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_1"
+        android:title="Aller a 1" />
 
     <item
-        android:id="@+id/nav_accueil"
-        android:title="Accueil" />
+        android:id="@+id/nav_2"
+        android:title="Aller a 2" />
 
     <item
-        android:id="@+id/nav_profil"
-        android:title="Projet" />
-
-    <item
-        android:id="@+id/nav_deconnexion"
-        android:title="Déconnexion" />
+        android:id="@+id/nav_3"
+        android:title="Aller a 3" />
 
 
 </menu>

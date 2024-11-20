@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "656755816862",
+    "project_id": "cours-firestore-811f3",
+    "storage_bucket": "cours-firestore-811f3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656755816862:android:8f574bda00649ed0143e8f",
+        "android_client_info": {
+          "package_name": "com.example.intro_datashore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhLMIhFdXX_mwD-WwO_08v0ty5FP3ENPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
